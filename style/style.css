@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-size: 1.125rem;
+  font-weight: 300;
+  background-color: #0f1424;
+  color: #fff;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+p {
+  font-weight: 300;
+}
+
+ul {
+  list-style: none;
+}
+
+#main-section {
+  width: 60%;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1em;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 200px;
+  -ms-grid-rows: 200px 200px;
+      grid-template-rows: 200px 200px;
+}
+
+#main-section .card {
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+#main-section .fas {
+  font-size: 3rem;
+  position: absolute;
+  top: 0;
+  right: 10px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  opacity: 0.4;
+  z-index: 1;
+}
+
+#main-section header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#main-section header i {
+  cursor: pointer;
+}
+
+#main-section .content {
+  position: relative;
+  z-index: 2;
+  background-color: #1c1f4a;
+  height: 170px;
+  padding: 1em;
+  margin-top: 1.8em;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  cursor: pointer;
+}
+
+#main-section .content:hover {
+  background-color: #6f76c8;
+}
+
+#main-section .fas.fa-ellipsis-h {
+  font-size: 1.125rem;
+  position: relative;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  opacity: 1;
+}
+
+#main-section .card-body p {
+  margin-top: 1em;
+}
+
+#main-section .reporter {
+  grid-row: span 2;
+  background-color: #5847eb;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+#main-section .reporter .reporter-img-cont img {
+  width: 4em;
+  border: 2px solid #fff;
+  margin: 1.2em 0 0 1.2em;
+  border-radius: 100%;
+}
+
+#main-section .reporter .content {
+  background-color: #5847eb;
+  border-radius: 10px;
+  margin-top: 0;
+}
+
+#main-section .reporter .content p {
+  color: #bdc1ff;
+}
+
+#main-section .reporter .content h1 {
+  font-size: 2rem;
+}
+
+#main-section .reporter .content h1 span {
+  display: block;
+  margin-top: 0.3em;
+}
+
+#main-section .reporter .lists {
+  background-color: #1c1f4a;
+  border-radius: 10px;
+  padding: 1em;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  height: 50%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#main-section .reporter .lists ul {
+  padding-bottom: 0.9em;
+}
+
+#main-section .reporter .lists ul li {
+  cursor: pointer;
+}
+
+#main-section .reporter .lists ul li.active {
+  color: #7536d3;
+}
+
+#main-section .reporter .lists ul li:not(:first-child) {
+  margin-top: 1em;
+}
+
+#main-section .work {
+  background-color: #ff8c66;
+}
+
+#main-section .play {
+  background-color: #56c2e6;
+}
+
+#main-section .study {
+  background-color: #ff5c7c;
+}
+
+#main-section .exercise {
+  background-color: #4acf81;
+}
+
+#main-section .social {
+  background-color: #7536d3;
+}
+
+#main-section .self-care {
+  background-color: #f1c65b;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media (max-width: 720px) {
+  #main-section {
+    width: 80%;
+    padding-block: 2em;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+  }
+}
+/*# sourceMappingURL=style.css.map */
